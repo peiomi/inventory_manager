@@ -1,1 +1,30 @@
 uvicorn main:app --reload
+
+if main.py is in app/ :
+uvicorn app.main:app --reload
+
+source .venv/bin/activate
+
+# postgresql:
+psql --version
+sudo apt install postgresql postgresql-contrib
+
+start postgres session:
+sudo -u postgres psql
+
+CREATE DATABASE inventory_db;
+
+to exit: 
+\q
+
+check users:
+\du
+
+set password:
+ALTER USER postgres PASSWORD 'your_password_here';
+
+connect to database:
+sudo -u postgres psql inventory_db
+
+check tables:
+\dt 
